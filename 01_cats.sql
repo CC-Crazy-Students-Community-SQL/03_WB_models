@@ -12,6 +12,7 @@ ENGINE = InnoDB;
 INSERT INTO `mydb`.`cats` (`id`, `name`, `age`) VALUES (default, "Beauty", 4);
 INSERT INTO `mydb`.`cats` (`id`, `name`, `age`) VALUES (default, "Blacky", 2);
 INSERT INTO `mydb`.`cats` (`id`, `name`, `age`) VALUES (default, "Blinky", 5);
+INSERT INTO `mydb`.`cats` (`id`, `name`, `age`) VALUES (default, "Brainy", 5);
 
 -- Tabelle anzeigen lassen
 
