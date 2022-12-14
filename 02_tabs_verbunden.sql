@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS `mydb`.`cats`;
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `catName` VARCHAR(45) NOT NULL,
@@ -5,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
+DROP TABLE IF EXISTS `mydb`.`servants`;
 CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `servantName` VARCHAR(45) NOT NULL,
@@ -12,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
   `cats_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_servants_cats_idx` (`cats_id` ASC),
+  UNIQUE INDEX `cats_id_UNIQUE` (`cats_id` ASC),
   CONSTRAINT `fk_servants_cats`
     FOREIGN KEY (`cats_id`)
     REFERENCES `mydb`.`cats` (`id`)
