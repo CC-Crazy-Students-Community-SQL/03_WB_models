@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `catName` VARCHAR(45) NOT NULL,
+  `catColor` VARCHAR(45) NOT NULL,
+  `catAge` INT NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;

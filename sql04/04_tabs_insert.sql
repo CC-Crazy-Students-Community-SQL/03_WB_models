@@ -1,6 +1,6 @@
-INSERT INTO `mydb`.`servants` (`id`, `servantName`, `servantTime`) VALUES (default, "Mia", 7);
-INSERT INTO `mydb`.`servants` (`id`, `servantName`, `servantTime`) VALUES (default, "Meik", 2);
-INSERT INTO `mydb`.`servants` (`id`, `servantName`, `servantTime`) VALUES (default, "Fred", 4);
+INSERT INTO `mydb`.`servants` (`id`, `servantName`, `servantTime`, `cats_id`) VALUES (default, "Manfred", 7, 3);
+INSERT INTO `mydb`.`servants` (`id`, `servantName`, `servantTime`, `cats_id`) VALUES (default, "Sandro", 2, 1);
+INSERT INTO `mydb`.`servants` (`id`, `servantName`, `servantTime`, `cats_id`) VALUES (default, "Peter", 4, 2);
 
 INSERT INTO `mydb`.`products` (`id`, `prodName`, `prodPrice`) VALUES (default, "Whiskas | Lachs", "2,75");
 INSERT INTO `mydb`.`products` (`id`, `prodName`, `prodPrice`) VALUES (default, "Whiskas | Huhn", "2,80");

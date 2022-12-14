@@ -1,20 +1,23 @@
-DROP TABLE IF EXISTS `mydb`.`servants`;
-CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `servantName` VARCHAR(45) NOT NULL,
-  `servantTime` INT NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-DROP TABLE IF EXISTS `mydb`.`products`;
 CREATE TABLE IF NOT EXISTS `mydb`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `prodName` VARCHAR(45) NOT NULL,
   `prodPrice` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
-
-DROP TABLE IF EXISTS `mydb`.`prod_has_servants`;
+CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `servantName` VARCHAR(45) NOT NULL,
+  `servantTime` INT NOT NULL,
+  `cats_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `cats_id`),
+  INDEX `fk_servants_cats1_idx` (`cats_id` ASC),
+  UNIQUE INDEX `cats_id_UNIQUE` (`cats_id` ASC),
+  CONSTRAINT `fk_servants_cats1`
+    FOREIGN KEY (`cats_id`)
+    REFERENCES `mydb`.`cats` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`prod_has_servants` (
   `servants_id` INT NOT NULL,
   `products_id` INT NOT NULL,
