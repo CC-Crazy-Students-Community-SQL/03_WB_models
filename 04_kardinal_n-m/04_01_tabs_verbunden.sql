@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-CREATE TABLE IF NOT EXISTS `mydb`.`prod_has_servants` (
+CREATE TABLE IF NOT EXISTS `mydb`.`purchases` (
   `servants_id` INT NOT NULL,
   `products_id` INT NOT NULL,
   PRIMARY KEY (`servants_id`, `products_id`),

@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
+
 CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `servantName` VARCHAR(45) NOT NULL,

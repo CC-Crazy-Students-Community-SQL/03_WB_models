@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS `mydb`.`cats`;
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `catName` VARCHAR(45) NOT NULL,
@@ -7,7 +6,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-DROP TABLE IF EXISTS `mydb`.`kitten`;
 CREATE TABLE IF NOT EXISTS `mydb`.`kitten` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `kittenName` VARCHAR(45) NOT NULL,
