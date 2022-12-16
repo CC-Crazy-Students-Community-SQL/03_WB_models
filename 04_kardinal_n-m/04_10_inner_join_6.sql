@@ -1,4 +1,4 @@
--- Inner Join 4 - Wie oft wurde ein Produkt gekauft
+-- Inner Join 6 - Wie oft wurde ein Produkt gekauft
 SELECT
 	concat( prodName, " wurde ", COUNT( prodName ), " mal gekauft." ) AS Kaufhandlung
 FROM 
