@@ -16,16 +16,14 @@ CREATE VIEW  `mydb`.`salmon` AS
 SELECT
 	concat( catName, " bakam Lachs." ) AS Lachsertrag
 FROM 
-	`mydb`.`purchases` 
-    INNER JOIN `mydb`.`salmon` 
+	`mydb`.`salmon` 
 WHERE 
 	prodName LIKE "%Lachs%"
 ;
 SELECT
 	concat( catName, " bakam den meisten Lachs." ) AS Lachsertrag
 FROM 
-	`mydb`.`purchases` 
-    INNER JOIN `mydb`.`salmon` 
+	`mydb`.`salmon` 			-- KEIN INNER MEHR NÖTIG, da diese bereits in der VIEW stehen
 WHERE 
 	prodName LIKE "%Lachs%"
 GROUP BY
